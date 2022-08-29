@@ -1,5 +1,6 @@
 package com.kayla.springbootmall.model;
 
+import com.kayla.springbootmall.constant.ProductCategory;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,7 +11,7 @@ import java.util.Date;
 public class Product {
     private Integer product_id;
     private String product_name;
-    private String category;
+    private ProductCategory category;
     private String image_url;
     private Integer price;
     private Integer stock;

@@ -14,7 +14,15 @@ public class ProductRowMapper implements RowMapper<Product> {
 
         product.setProduct_id(resultSet.getInt("product_id"));
         product.setProduct_name(resultSet.getString("product_name"));
-        product.setCategory(resultSet.getString("category"));
+
+        // 分類 string 轉型成 enum 類型
+        String categoryStr = resultSet.getString("category");
+        ProductCategory category = ProductCategory.valueOf(categoryStr);
+        product.setCategory(category);
+
+        // 寫成一行
+        // product.setCategory(ProductCategory.valueOf(resultSet.getString("category")));
+
         product.setImage_url(resultSet.getString("image_url"));
         product.setPrice(resultSet.getInt("price"));
         product.setStock(resultSet.getInt("stock"));
