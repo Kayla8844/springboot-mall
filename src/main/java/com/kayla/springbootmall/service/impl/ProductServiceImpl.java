@@ -2,6 +2,7 @@ package com.kayla.springbootmall.service.impl;
 
 import com.kayla.springbootmall.constant.ProductCategory;
 import com.kayla.springbootmall.dao.ProductDao;
+import com.kayla.springbootmall.dao.ProductQueryParams;
 import com.kayla.springbootmall.dto.ProductRequest;
 import com.kayla.springbootmall.model.Product;
 import com.kayla.springbootmall.service.ProductService;
@@ -16,8 +17,8 @@ public class ProductServiceImpl implements ProductService {
     private ProductDao productDao;
 
     @Override
-    public List<Product> getProducts(ProductCategory category, String search) {
-        return productDao.getProducts(category, search);
+    public List<Product> getProducts(ProductQueryParams productQueryParams) {
+        return productDao.getProducts(productQueryParams);
     }
 
     @Override
