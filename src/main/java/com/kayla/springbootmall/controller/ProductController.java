@@ -1,7 +1,7 @@
 package com.kayla.springbootmall.controller;
 
 import com.kayla.springbootmall.constant.ProductCategory;
-import com.kayla.springbootmall.dao.ProductQueryParams;
+import com.kayla.springbootmall.dto.ProductQueryParams;
 import com.kayla.springbootmall.dto.ProductRequest;
 import com.kayla.springbootmall.model.Product;
 import com.kayla.springbootmall.service.ProductService;

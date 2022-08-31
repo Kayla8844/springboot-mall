@@ -1,4 +1,4 @@
-package com.kayla.springbootmall.dao;
+package com.kayla.springbootmall.dto;
 
 import com.kayla.springbootmall.constant.ProductCategory;
 import lombok.Getter;
